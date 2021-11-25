@@ -1,0 +1,138 @@
+/*--------------------------INDEX.HTML-------------------------------*/
+header {
+    position: sticky;
+    top: 0%;
+    width: 100vw;
+    height: auto;
+    z-index: 10; }
+  
+  nav {
+    font-size: 120%;
+    font-family: 'Roboto Condensed', sans-serif;
+    text-align: center;
+    font-weight: 700;
+    font-style: normal;
+    background-color: rgb(226, 211, 2);
+    box-shadow: 0 -5px 20px black; }
+  
+  .collapse.navbar-collapse {
+    justify-content: flex-end; }
+  
+  .imgLogo {
+    height: 120px;
+    width: 120px;
+    margin-left: 10%; }
+  
+
+
+main {
+    height: auto;
+    width: 100vw;
+    background-color: rgba(185, 185, 185, 0.651); }
+  
+.btn.btn-primary {
+    background-color: rgba(255, 145, 0, 0.856);
+    border-color: rgb(255, 255, 255);     
+}
+    
+    
+.divPrincipalIndex {
+    text-align: left;
+    font-size: 10px;
+    word-spacing: 10px;
+    color: rgb(209, 209, 209);
+    position: relative; 
+    padding: 1rem;
+    background-image: url(/proyectoFinal/Imagenes/Fondos/bannerIndex.png);
+    background-size: cover;
+    height: 320px;
+}
+
+.container-grid{
+ display: grid;
+ grid-template-columns: 1fr 1fr 1fr 1fr;
+ grid-template-rows: 0.5fr 1fr 1fr 1fr 1fr;
+ grid-template-areas:"banner destacado destacado destacado"
+                     "banner card1 card1 card1"
+                     "banner card2 card2 card2"
+                     "banner card3 card3 card3"
+                     "banner card4 card4 card4";
+ row-gap: 5px;
+ column-gap: 5px;
+ 
+ 
+}
+.container__div2{
+  grid-area: banner;
+}
+.container__div1{
+  grid-area: destacado;
+  text-align: center;
+  display: flex;
+  align-items: center;
+}
+.container__destacados{
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 50px;
+}
+.container__card1{
+  grid-area: card1;
+  margin: 10px;
+}
+.container__card2{
+  grid-area: card2;
+  margin: 10px;
+}
+.container__card3{
+  grid-area: card3;
+  margin: 10px;
+}
+.container__card4{
+  grid-area: card4;
+  margin: 10px;
+}
+.card{
+  align-items: center;
+}
+.img-fluid{
+  height: 200px;
+  width: 200px;
+}
+
+
+.logoChat {
+    height: 100px;
+    width: 100px;
+    position: fixed;
+    bottom: 15%;
+    right: 0%; }
+  
+.footer {
+        display: flex;
+        height: 80px;
+        width: 100vw;
+        box-shadow: 0 1px 15px black;
+        justify-content: space-evenly;
+        padding-top: 20px;
+        padding-bottom: 10px; }
+        .footer--color {
+          background-color: rgb(226, 211, 2); }
+        .footer__lista {
+          display: flex;
+          list-style: none;
+          padding: 0%;
+          margin: 0%; }
+        .footer__iconos {
+          display: flex;
+          list-style: none;
+          height: 60px;
+          width: 60px;
+          margin-left: 20px;
+          margin-right: 20px; }
+        .footer__texto {
+          padding: 10px;
+          font-size: 100%;
+          font-weight: 400;
+          text-align: center;
+          margin-bottom: 10px; }

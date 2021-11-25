@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link rel="stylesheet" href="./CSS/style.css">
+    <title>Document</title>
+</head>
+<body>
+<header>
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="./index.html"><img class="imgLogo" src="./Imagenes/Logos/logo.png" alt="logoHorizontal"></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mb-2 mb-lg-0">
+              <li class="nav-item px-3">
+                <a class="nav-link active" aria-current="page" href="Index.html">¿Quienes Somos?</a>
+              </li>
+              <li class="nav-item px-3">
+                <a class="nav-link" href="#">Productos</a>
+              </li>
+              <li class="nav-item px-3">
+                <a class="nav-link" href="#">Arma tu PC</a>
+              </li>
+              <li class="nav-item px-3">
+                <a class="nav-link" href="#">Servicio Post venta</a>
+              </li>
+              <li class="nav-item px-3">
+                <a class="nav-link" href="#">Contacto</a>
+              </li>
+              <li class="nav-item px-2">
+                <!-- Button trigger modal -->
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+              ACCESO A USUARIOS
+              </button>
+              </li>
+            </ul>
+            </div>
+        </div>
+</nav>
+</header>
+<main>
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+         <div class="modal-content">
+           <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">ACCESO A USUARIOS</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+           </div>
+           <div class="modal-body">
+           <form>
+           <label for="us">Usuario</label>
+           <input type="text" name="Usuario" id="us" placeholder="Ingrese su usuario">
+           <br>
+           <label for="pass">Contraseña</label>
+           <input type="text" name="Contraseña" id="pass" placeholder="Ingrese su Contraseña">
+           </div>
+           <div class="modal-footer">
+           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Ingresar</button>
+           <button type="button" class="btn btn-primary">Cerrar</button>
+           </div>
+          </div>
+         </div>
+    </div>
+  
+    <div class="divPrincipalIndex">
+<h1>Bienvenidos a Compumac</h1>
+<h2>lideres en venta de insumos informáticos</h2>
+</div>
+
+<div class="container-grid">
+<div class="container__div1">
+  <h2 class="container__destacados">Productos destacados</h2>
+</div>
+<div class="container__div2">
+<aside>
+<img src="./Imagenes/Fondos/banner-vertical-Nvidia.jpg" alt="publicidad-nvidia">
+</aside></div>
+<div class="container__card1">
+  <div class="card text-white bg-dark mb-3" style="max-width: auto;">
+    <div class="row g-0">
+      <div class="col-md-4">
+        <img src="./Imagenes/Productos/lgMonitor.jfif" class="img-fluid rounded-start" alt="lgMonitor">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h5 class="card-title">LG LED 21 144Ghz</h5>
+          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+          <p class="card-text"><small class="text-muted">$$ 32000 </small></p>
+          <button tipe="button btn" class="btn btn-primary">Añadir a Carrito</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container__card2">
+  <div class="card text-white bg-dark mb-3" style="max-width: auto;">
+    <div class="row g-0">
+      <div class="col-md-4">
+        <img src="./Imagenes/Productos/tecladoMecanicoRD.jpg" class="img-fluid rounded-start" alt="tecladoRD">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h5 class="card-title">Teclado Mecanico RD Barracuda</h5>
+          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+          <p class="card-text"><small class="text-muted">$$ 15000</small></p>
+          <button tipe="button btn" class="btn btn-primary">Añadir a Carrito</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container__card3">
+  <div class="card text-white bg-dark mb-3" style="max-width: auto;">
+    <div class="row g-0">
+      <div class="col-md-4">
+        <img src="./Imagenes/Productos/mouseRD.jpg" class="img-fluid rounded-start" alt="mouseRD">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h5 class="card-title">Mouse Gammer Red Dragon Barracuda</h5>
+          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+          <p class="card-text"><small class="text-muted">$$ 12000</small></p>
+          <button tipe="button btn" class="btn btn-primary">Añadir a Carrito</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container__card4">
+  <div class="card text-white bg-dark mb-3" style="max-width: auto;">
+    <div class="row g-0">
+      <div class="col-md-4">
+        <img src="./Imagenes/Productos/amdRyzen5.jpg" class="img-fluid rounded-start" alt="procesadorAMD">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h5 class="card-title">AMD Ryzen 5 3800g</h5>
+          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+          <p class="card-text"><small class="text-muted">$$ 53000</small></p>
+          <button tipe="button btn" class="btn btn-primary">Añadir a Carrito</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</main>
+<footer>
+<div class="footer footer--color">
+        <ul class="footer__lista">
+            <li><a href="#"><img class="footer__iconos" src="./Imagenes/Iconos/logoPaypal.png" alt="logPaypal"></a></li>
+            <li><a href="#"><img class="footer__iconos" src="./Imagenes/Iconos/logoMaster.png" alt="logMaster"></a></li>
+            <li><a href="#"><img class="footer__iconos" src="./Imagenes/Iconos/logoVisa.svg" alt="logVisa"></a></li>
+        </ul>
+        <p class="footer__texto">Sitio Web Oficial de CompuMAC S.R.L todos los derechos reservados. Diseño MK.</p>
+        <ul class="footer__lista">
+            <li><a href="https://api.whatsapp.com/send/?phone=5491136215836&text&app_absent=0"><img class="footer__iconos" src="./Imagenes/Iconos/logoWsap.png" alt="logoWsap"></a></li>
+            <li><a href="https://www.instagram.com/positivo.viajes/?hl=es-la"><img class="footer__iconos" src="./Imagenes/Iconos/logoInstagram.jpg" alt="logoInsta"></a></li>
+            <li><a href="https://twitter.com/positivoviajes"><img class="footer__iconos" src="./Imagenes/Iconos/logoTwitter.png" alt="logoTwitter"></a></li>
+            <li><a href="https://www.youtube.com/channel/UC3CcWL1uZp_GPqkOC_422vg"><img class="footer__iconos" src="./Imagenes/Iconos/logoYoutube.png" alt="logoYoutube"></a></li>
+        </ul>
+</div>
+</footer>
+
+
+
+<!-- <script src="./clase1Kassem.js"></script> -->
+<!-- <script src="./clase2Kassem.js"></script> -->
+<!-- <script src="clase3Kassem.js"></script> -->
+<!-- <script src="clase4Kassem.js"></script> -->
+<!-- <script src="clase5Kassem.js"></script> -->
+<script src="./JS/clase6kassem.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+</body>
+</html>
