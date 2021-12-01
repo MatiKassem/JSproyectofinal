@@ -1,7 +1,6 @@
 alert("Bienvenidos a la tienda virtual de Compumac, soy Trony su asistente virtual");
 let menuInicio = prompt("Elija la opción deseada: \n 1. Catalogo de Productos \n 2. Productos destacados de la semana \n 3. Soporte Técnico \n 4. Devoluciones y reclamos");
 
-
 class Productos{
     constructor (productos){
         this.articulo = productos.articulo;
@@ -23,8 +22,7 @@ const cs16gb = new Productos ({articulo:"Memoria RAM", marca:"Corsair", precio:8
 let listaDeProductos = [lg800221, hp200545, hp100225, redDragon1212, redDragon1002, logitecBass, logitecMini, ks16gb, cs16gb]
 console.log(listaDeProductos.sort((a,b) => b.precio - a.precio));
 
-procesoDeCompra = () =>{
-    while (menuInicio != ""){
+while (menuInicio != ""){
         switch(menuInicio){
             case "1":
                 console.log(listaDeProductos);
@@ -70,5 +68,5 @@ procesoDeCompra = () =>{
                 }
         }
     }
-}
-console.log(procesoDeCompra());
+
+

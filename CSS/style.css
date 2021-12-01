@@ -43,7 +43,7 @@ main {
     color: rgb(209, 209, 209);
     position: relative; 
     padding: 1rem;
-    background-image: url(/proyectoFinal/Imagenes/Fondos/bannerIndex.png);
+    background-image: url(/proyectoFinal/Imagenes/Fondos/bannerindex.png);
     background-size: cover;
     height: 320px;
 }
