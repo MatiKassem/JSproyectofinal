@@ -69,4 +69,15 @@ while (menuInicio != ""){
         }
     }
 
+const bestSellers = ["monitor KS22", "Fuerte Sentey plus", "Teclado RD2323", "Mouse Gammer trk200", "Gabinete Senteyx10"];
+
+let productosPromo = "";
+bestSellers.forEach(productList);
+
+document.getElementById("promo").innerHTML = productosPromo;
+
+function productList (item, index){
+    productosPromo += ++index + ": " + item + "<br>";
+}
+
 
