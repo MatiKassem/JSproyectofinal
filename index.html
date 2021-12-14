@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
     <link rel="stylesheet" href="./CSS/style.css">
     <title>Document</title>
 </head>
@@ -34,9 +35,16 @@
                 <a class="nav-link" href="#">Contacto</a>
               </li>
               <li class="nav-item px-2">
-                <!-- Button trigger modal -->
+                <!-- Button Acceso modal -->
               <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
               ACCESO A USUARIOS
+              </button>
+              </li>
+              <li class="nav-item px-2">
+                <!-- Button Carrito modal -->
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal1">
+              <i class="fas fa-shopping-cart"></i>
+              <span id="carrito-contador">0</span>
               </button>
               </li>
             </ul>
@@ -67,89 +75,50 @@
           </div>
          </div>
     </div>
-  
-    <div class="divPrincipalIndex">
+    <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+       <div class="modal-content">
+         <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Carrito de Compras</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+         </div>
+         <div class="modal-body">
+        <div id="carrito-contenedor">
+        
+        </div>
+        <div>
+        <p class="precioProducto">Precio Total $<span id="precioTotal"></span></p>
+        </div>
+         </div>
+         <div class="modal-footer">
+         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Vaciar Carrito</button>
+         <button type="button" class="btn btn-primary">Finalizar Compra</button>
+         </div>
+        </div>
+       </div>
+  </div>
+<div class="divPrincipalIndex">
 <h1>Bienvenidos a Compumac</h1>
 <h2>lideres en venta de insumos informáticos</h2>
 <h2>Los mas vendidos del mes</h2>
-<h2 id="promo"></h2>
 </div>
-
 <div class="container-grid">
 <div class="container__div1">
-  <h2 class="container__destacados">Productos destacados</h2>
+  <select id="selecTipo" class="container__seleccion btn btn-primary">
+    <option value="all">todos los productos</option>
+    <option value="Monitor">Monitores</option>
+    <option value="Teclado">Teclados</option>
+    <option value="Mouse">Mouses</option>
+    <option value="Auriculares">Auriculares</option>
+    <option value="Procesador">Procesadores</option>
+    <option value="Memoria RAM">Memorias</option>
+  </select>
 </div>
 <div class="container__div2">
-<aside>
-<img src="./Imagenes/Fondos/banner-vertical-Nvidia.jpg" alt="publicidad-nvidia">
+<aside class="bannerVertical">
+<img  class="bannerVertical" src="./Imagenes/Fondos/banner-vertical-Nvidia.jpg" alt="publicidad-nvidia">
 </aside></div>
-<div class="container__card1">
-  <div class="card text-white bg-dark mb-3" style="max-width: auto;">
-    <div class="row g-0">
-      <div class="col-md-4">
-        <img src="./Imagenes/Productos/lgMonitor.jfif" class="img-fluid rounded-start" alt="lgMonitor">
-      </div>
-      <div class="col-md-8">
-        <div class="card-body">
-          <h5 class="card-title">LG LED 21 144Ghz</h5>
-          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-          <p class="card-text"><small class="text-muted">$$ 32000 </small></p>
-          <button tipe="button btn" class="btn btn-primary">Añadir a Carrito</button>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-<div class="container__card2">
-  <div class="card text-white bg-dark mb-3" style="max-width: auto;">
-    <div class="row g-0">
-      <div class="col-md-4">
-        <img src="./Imagenes/Productos/tecladoMecanicoRD.jpg" class="img-fluid rounded-start" alt="tecladoRD">
-      </div>
-      <div class="col-md-8">
-        <div class="card-body">
-          <h5 class="card-title">Teclado Mecanico RD Barracuda</h5>
-          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-          <p class="card-text"><small class="text-muted">$$ 15000</small></p>
-          <button tipe="button btn" class="btn btn-primary">Añadir a Carrito</button>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-<div class="container__card3">
-  <div class="card text-white bg-dark mb-3" style="max-width: auto;">
-    <div class="row g-0">
-      <div class="col-md-4">
-        <img src="./Imagenes/Productos/mouseRD.jpg" class="img-fluid rounded-start" alt="mouseRD">
-      </div>
-      <div class="col-md-8">
-        <div class="card-body">
-          <h5 class="card-title">Mouse Gammer Red Dragon Barracuda</h5>
-          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-          <p class="card-text"><small class="text-muted">$$ 12000</small></p>
-          <button tipe="button btn" class="btn btn-primary">Añadir a Carrito</button>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-<div class="container__card4">
-  <div class="card text-white bg-dark mb-3" style="max-width: auto;">
-    <div class="row g-0">
-      <div class="col-md-4">
-        <img src="./Imagenes/Productos/amdRyzen5.jpg" class="img-fluid rounded-start" alt="procesadorAMD">
-      </div>
-      <div class="col-md-8">
-        <div class="card-body">
-          <h5 class="card-title">AMD Ryzen 5 3800g</h5>
-          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-          <p class="card-text"><small class="text-muted">$$ 53000</small></p>
-          <button tipe="button btn" class="btn btn-primary">Añadir a Carrito</button>
-        </div>
-      </div>
-    </div>
-  </div>
+<div class="container__div3" id="contenedor-productos">
 </div>
 </div>
 </main>
@@ -169,14 +138,6 @@
         </ul>
 </div>
 </footer>
-
-
-
-<!-- <script src="./clase1Kassem.js"></script> -->
-<!-- <script src="./clase2Kassem.js"></script> -->
-<!-- <script src="clase3Kassem.js"></script> -->
-<!-- <script src="clase4Kassem.js"></script> -->
-<!-- <script src="clase5Kassem.js"></script> -->
 <script src="./JS/scripts.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
 </body>
