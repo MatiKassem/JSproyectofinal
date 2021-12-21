@@ -170,10 +170,11 @@ function agregarAlCarrito(id){
         actualizarCarrito();
 
     })
-
 }
 
 function actualizarCarrito(){
       contadorCarrito.innerText = carritoDeCompras.reduce((acc, el) => acc + el.cantidad, 0);
       precioTotal.innerText = carritoDeCompras.reduce((acc, el) => acc + (el.precio * el.cantidad), 0);
 }
+
+
