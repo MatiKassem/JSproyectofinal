@@ -177,4 +177,18 @@ function actualizarCarrito(){
       precioTotal.innerText = carritoDeCompras.reduce((acc, el) => acc + (el.precio * el.cantidad), 0);
 }
 
+$(()=>{
+$('#tituloPrincipal').animate({
+    "font-size": "50px"
+}).fadeOut(1000).delay(800).fadeIn(3000);
+
+$('#tituloSecundario').animate({
+    "font-size": "50px"
+}).fadeOut(1000).delay(2000).fadeIn(3000);
+
+$('#losMasVendidos').animate({
+    "font-size": "50px"
+}).fadeOut(1000).delay(3000).fadeIn(3000);
+
+});
 
