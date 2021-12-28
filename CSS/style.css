@@ -62,7 +62,7 @@ main {
     color: rgb(252, 252, 252);
     position: relative; 
     padding: 1rem;
-    background-image: url(/proyectoFinal/Imagenes/Fondos/bannerIndex.png);
+    background-image: url(../proyectoFinal/Imagenes/Fondos/bannerIndex.png);
     background-size: cover;
     height: 250px;
 }
