@@ -1,6 +1,4 @@
-/* alert("Bienvenidos a la tienda virtual de Compumac, soy Trony su asistente virtual");
-let menuInicio = prompt("Elija la opción deseada: \n 1. Catalogo de Productos \n 2. Productos destacados de la semana \n 3. Soporte Técnico \n 4. Devoluciones y reclamos");
- */
+/* CONSTRUCTOR DE PRODUCTOS */
 class Productos{
     constructor (productos){
         this.id = productos.id;
@@ -25,68 +23,10 @@ const ks16gb = new Productos ({id:9, articulo:"Memoria RAM", nombre:"Memoria RAM
 const cs16gb = new Productos ({id:10, articulo:"Memoria RAM", nombre:"Memoria RAM DDR4 Revange Corsair", marca:"Corsair", precio:800, stock:20, img:'./Imagenes/Productos/cs16gb.png', cantidad:1});
 
 let listaDeProductos = [lg800221, amdRyzen3600, hp200545, hp100225, redDragon1212, redDragon1002, logitecBass, logitecMini, ks16gb, cs16gb];
-console.log(listaDeProductos.sort((a,b) => a.precio - b.precio));
-/* 
-while (menuInicio != ""){
-        switch(menuInicio){
-            case "1":
-                console.log(listaDeProductos);
-                menuInicio = "";
-                break;
-            case "2":
-                const listaDestacados = listaDeProductos.filter(destacado => destacado.precio <=900);
-                console.log(listaDestacados);
-                menuInicio = "";
-                break;
-            case "3":
-                prompt("Ingrese su nombre completo");
-                prompt("ingrese su email");
-                prompt("ingrese su número de telefono");
-                prompt("ingrese una breve descripción del problema");
-                alert("En la brevedad un asesor comercial se contactará con usted. Gracias por elegirnos");
-                let ayudarlo = prompt("Puedo ayudarlo con algo más? \n ingrese la opción deseada \n SI \n NO");
-                if (ayudarlo.toLocaleUpperCase() === "SI"){
-                    menuInicio = prompt("Elija la opción deseada: \n 1. Catalogo de Productos \n 2. Productos destacados de la semana \n 3. Soporte Técnico \n 4. Devoluciones y reclamos");
-                }else if (ayudarlo.toLocaleUpperCase() === "NO"){
-                    alert("Gracias por elegír CompuMac");
-                    menuInicio = "";
-                    break;
-                }
-                
-            case "4":
-                let numeroFactura = prompt("Bienvenido a la central de devoluciones de CompuMac, por favor ingrese su número de factura por el la cual se proceso su reclamo/devolución");
-                parseInt(numeroFactura);
-                if (numeroFactura >= 1200){
-                    alert("La reparación del componente principal se encuentra en proceso, puede demorar entre 48 y 72hs, le pedimos disculpas por la demora");
-                }else if(numeroFactura < 1000)
-                    alert("Ya esta autorizada su devolución, número de orden 456812, puede pasar por la oficina central para retirarla");
-                else{
-                    alert("Su pedido se encuentra en período de evaluación, en las próximas 24 hs nos comunicaremos con usted.");
-                }
-                ayudarlo = prompt("Puedo ayudarlo con algo más? \n ingrese la opción deseada \n SI \n NO");
-                if (ayudarlo.toLocaleUpperCase() === "SI"){
-                    menuInicio = prompt("Elija la opción deseada: \n 1. Catalogo de Productos \n 2. Productos destacados de la semana \n 3. Soporte Técnico \n 4. Devoluciones y reclamos");
-                }else if (ayudarlo.toLocaleUpperCase() === "NO"){
-                    alert("Gracias por elegír CompuMac");
-                    menuInicio = "";
-                    break;
-                }
-        }
-    } */
-
-/* const bestSellers = ["monitor KS22", "Fuerte Sentey plus", "Teclado RD2323", "Mouse Gammer trk200", "Gabinete Senteyx10"];
-
-let productosPromo = "";
-bestSellers.forEach(productList);
-
-document.getElementById("promo").innerHTML = productosPromo;
-
-function productList (item, index){
-    productosPromo += ++index + ": " + item + "<br>";
-} */
 
 let carritoDeCompras = [];
 
+/* CONSTANTES GLOBALES */
 const contenedorProducto = document.getElementById('contenedor-productos');
 const contenedorCarrito = document.getElementById('carrito-contenedor');
 
@@ -95,8 +35,8 @@ const precioTotal = document.getElementById('precioTotal');
 
 const selecTipo = document.getElementById('selecTipo');
 
+/* FILTRO PARA SELECCION DE PRODUCTOS */
 selecTipo.addEventListener('change',()=>{
-    console.log(selecTipo.value);
     if(selecTipo.value == "all"){
         mostrarProductos(listaDeProductos);
     }else{
@@ -106,6 +46,7 @@ selecTipo.addEventListener('change',()=>{
 
 mostrarProductos(listaDeProductos);
 
+/* MOSTRAR PRODUCTOS EN EL HTML */
 function mostrarProductos(array){
    contenedorProducto.innerHTML = "";
    array.forEach(element => {
@@ -120,7 +61,8 @@ function mostrarProductos(array){
                                     <div class="card-body">
                                     <h5 class="card-title">${element.nombre}</h5>
                                     <p class="card-text">Marca: ${element.marca}</p>
-                                    <p class="card-text"><small class="text-muted">$${element.precio}</small></p>
+                                    <p class="card-text">Stock: ${element.stock}</p>
+                                    <p class="card-text"><small class="text-muted">Precio: $${element.precio}</small></p>
                                     <button tipe="button btn" class="btn btn-primary" id="boton${element.id}">Añadir a Carrito</button>
                                     </div>
                                 </div>
@@ -135,60 +77,58 @@ function mostrarProductos(array){
    });
 }
 
+/* AGREGAR LOS PRODUCTOS AL CARRITO */
 function agregarAlCarrito(id){
-        let productoAgregar = listaDeProductos.find(elemento => elemento.id == id);
+        let repetido = carritoDeCompras.find(elemento => elemento.id == id)
+        if(repetido){
+            repetido.cantidad = repetido.cantidad + 1 
+            document.getElementById(`cantidad${repetido.id}`).innerHTML = `<p class="card-text" id="cantidad${repetido.id}">Cantidad: ${repetido.cantidad}</p>`
+            actualizarCarrito();
+        }else{
+            let productoAgregar = listaDeProductos.find(elemento => elemento.id == id);
 
-        carritoDeCompras.push(productoAgregar)
-        
-        actualizarCarrito()
-
-        let div = document.createElement('div')
-        div.classList.add('productoEnCarrito')
-        div.innerHTML = `<div class="card mb-3" style="max-width: 540px;">
-                         <div class="row g-0">
-                        <div class="col-md-4">
-                         <img src="${productoAgregar.img}" class="img-fluid rounded-start" alt="...">
-                        </div>
-                          <div class="col-md-8">
-                        <div class="card-body">
-                          <h5 class="card-title">${productoAgregar.nombre}</h5>
-                        <p class="card-text">El procesador mas rápido del mercado</p>
-                        <p class="card-text"><small class="text-muted">Precio Unitario ${productoAgregar.precio}</small></p>
-                    </div>
-                    </div>
-                    
-                </div>
-                <button class="botonEliminar" id="eliminar${productoAgregar.id}"><i class="fas fa-trash"></i></button>
-            </div>`
-    contenedorCarrito.appendChild(div);
+            carritoDeCompras.push(productoAgregar)
+            
+            actualizarCarrito()
     
-    let botonEliminar = document.getElementById(`eliminar${productoAgregar.id}`)
-    botonEliminar.addEventListener('click', ()=>{
-
-        botonEliminar.parentElement.remove();
-        carritoDeCompras = carritoDeCompras.filter(elemento => elemento.id != productoAgregar.id)
-        actualizarCarrito();
-
-    })
+            let div = document.createElement('div')
+            div.classList.add('productoEnCarrito')
+            div.innerHTML = `<div class="card mb-3" style="max-width: 540px;">
+                             <div class="row g-0">
+                            <div class="col-md-4">
+                             <img src="${productoAgregar.img}" class="img-fluid rounded-start" alt="...">
+                            </div>
+                              <div class="col-md-8">
+                            <div class="card-body">
+                              <h5 class="card-title">${productoAgregar.nombre}</h5>
+                            <p class="card-text" id="cantidad${productoAgregar.id}">Cantidad: ${productoAgregar.cantidad}</p>
+                            <p class="card-text"><small class="text-muted">Precio Unitario ${productoAgregar.precio}</small></p>
+                        </div>
+                        </div>
+                        
+                    </div>
+                    <button class="botonEliminar" id="eliminar${productoAgregar.id}"><i class="fas fa-trash"></i>
+                    <p class="textBoton">Eliminar Producto</p>
+                    </button>
+                </div>`
+            contenedorCarrito.appendChild(div);
+            
+            let botonEliminar = document.getElementById(`eliminar${productoAgregar.id}`)
+            botonEliminar.addEventListener('click', ()=>{
+        
+                botonEliminar.parentElement.remove();
+                carritoDeCompras = carritoDeCompras.filter(elemento => elemento.id != productoAgregar.id)
+                actualizarCarrito();
+        
+            })
+        }
 }
 
+/* INTERACTUAR CON EL CARRITO */
 function actualizarCarrito(){
       contadorCarrito.innerText = carritoDeCompras.reduce((acc, el) => acc + el.cantidad, 0);
       precioTotal.innerText = carritoDeCompras.reduce((acc, el) => acc + (el.precio * el.cantidad), 0);
 }
 
-$(()=>{
-$('#tituloPrincipal').animate({
-    "font-size": "50px"
-}).fadeOut(1000).delay(800).fadeIn(3000);
 
-$('#tituloSecundario').animate({
-    "font-size": "50px"
-}).fadeOut(1000).delay(2000).fadeIn(3000);
-
-$('#losMasVendidos').animate({
-    "font-size": "50px"
-}).fadeOut(1000).delay(3000).fadeIn(3000);
-
-});
 

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <link href= "https://bootswatch.com/5/lux/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <link rel="stylesheet" href="../CSS/style.css">
+    <title>Document</title>
+</head>
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="../index.html"><img class="imgLogo" src="../Imagenes/Logos/logo.png" alt="logoHorizontal"></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mb-2 mb-lg-0">
+              <li class="nav-item px-3">
+                <a class="nav-link" aria-current="page" href="../index.html">Home</a>
+              </li>
+              <li class="nav-item px-3">
+                <a class="nav-link active" href="about.html">¿Quienes Somos?</a>
+              </li>
+              <li class="nav-item px-3">
+                <a class="nav-link" href="contacto.html">Contacto</a>
+              </li>
+              <li class="nav-item px-2">
+                <!-- Button Acceso modal -->
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+              ACCESO A USUARIOS
+              </button>
+              </li>
+            </ul>
+            </div>
+        </div>
+</nav>
+</header>
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+         <div class="modal-content">
+           <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">ACCESO A USUARIOS</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+           </div>
+           <div class="modal-body">
+           <form>
+           <label for="us">Usuario</label>
+           <input type="text" name="Usuario" id="us" placeholder="Ingrese su usuario">
+           <br>
+           <label for="pass">Contraseña</label>
+           <input type="text" name="Contraseña" id="pass" placeholder="Ingrese su Contraseña">
+           </div>
+           <div class="modal-footer">
+           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Ingresar</button>
+           <button type="button" class="btn btn-primary">Cerrar</button>
+           </div>
+          </div>
+         </div>
+    </div>
+    <div class="bannerAbout">
+        <h2 class="textoBanner">Somos Especialistas en la Venta de Insumos para el Armado de tu Pc</h2>
+    </div>
+    <main>
+    <div>
+        <h2 class="itemAbout">Quienes Somos</h2>
+        <p class="parrafosAbout">CompuMAC somos todos. Nacimos siendo un emprendimiento virtual con oficina central en el centro del barrio de Villa Urquiza en Capital Federal. Iniciamos nuestro camino generando un vínculo cercano con nuestros clientes y con toda nuestra comunidad en redes sociales, acompañando a todos de una forma personalizada para brindarles las novedades tecnológicas y los mejores precios en cada una de las necesidades.</p> 
+        
+        <p class="parrafosAbout">Con esfuerzo, trabajo y las ganas de superarnos diariamente, creamos un nuevo canal de venta E-commerce, el cual desarrollamos con esfuerzo y mucha dedicación para llegar a más personas y agregando valor desde la confianza y el compromiso para seguir creciendo. </p>
+        
+        <p class="parrafosAbout">Fortalecimos nuestras alianzas estratégicas para brindar calidad y excelencia en nuestros productos y servicios. Contamos con un servicio técnico exclusivo para nuestros clientes, renovamos nuestro stock día a día con las principales marcas tecnológicas con el objetivo de tener productos de excelencia y calidad y contamos con distribución a nivel nacional para que cualquier persona pueda adquirir nuestros productos desde la comodidad de su hogar o su empresa.</p>         
+    </div>
+    <div>
+        <h2 class="itemAbout">El Equipo de Trabajo</h2>
+        <div class="contenedorCards">
+        <div class="card" style="width: 18rem;">
+            <img src="../Imagenes/Staff/perfil2.jpg" class="card-img-top" alt="fotoPerfil1">
+            <div class="card-body">
+              <h5 class="card-title">Eduardo Muñoz</h5>
+              <p class="card-text">Analista de Sistemas, experto en armado de PC para alto rendimiento.</p>
+              <a href="https://wa.me/message/2WYUTV6WIQ3XH1" class="btn btn-primary">Contactame!</a>
+            </div>
+          </div>
+          <div class="card" style="width: 18rem;">
+            <img src="../Imagenes/Staff/perfil1.jpg" class="card-img-top" alt="fotoPerfil1">
+            <div class="card-body">
+              <h5 class="card-title">Carla Ruvosky</h5>
+              <p class="card-text">Licenciada en Administración, encargada del area administrativa.</p>
+              <a href="https://wa.me/message/2WYUTV6WIQ3XH1" class="btn btn-primary">Contactame!</a>
+            </div>
+          </div>
+          <div class="card" style="width: 18rem;">
+            <img src="../Imagenes/Staff/perfil3.jpg" class="card-img-top" alt="fotoPerfil1">
+            <div class="card-body">
+              <h5 class="card-title">Juan Gonzalez</h5>
+              <p class="card-text">Gerente Comercial, encargado del area comercial..</p>
+              <a href="https://wa.me/message/2WYUTV6WIQ3XH1" class="btn btn-primary">Contactame!</a>
+            </div>
+          </div>
+        </div>
+    </div>
+    <div>
+        <h2 class="itemAbout">Nuestros Proveedores</h2>
+        <div class="divProveedores container-fluid">
+        </div>
+    </div>
+</main>
+    <footer>
+        <div class="footer footer--color">
+                <ul class="footer__lista">
+                    <li><a href="#"><img class="footer__iconos" src="../Imagenes/Iconos/logoPaypal.png" alt="logPaypal"></a></li>
+                    <li><a href="#"><img class="footer__iconos" src="../Imagenes/Iconos/logoMaster.png" alt="logMaster"></a></li>
+                    <li><a href="#"><img class="footer__iconos" src="../Imagenes/Iconos/logoVisa.svg" alt="logVisa"></a></li>
+                </ul>
+                <p class="footer__texto">Sitio Web Oficial de CompuMAC S.R.L todos los derechos reservados. Diseño MK.</p>
+                <ul class="footer__lista">
+                    <li><a href="https://api.whatsapp.com/send/?phone=5491136215836&text&app_absent=0"><img class="footer__iconos" src="../Imagenes/Iconos/logoWsap.png" alt="logoWsap"></a></li>
+                    <li><a href="https://www.instagram.com/positivo.viajes/?hl=es-la"><img class="footer__iconos" src="../Imagenes/Iconos/logoInstagram.jpg" alt="logoInsta"></a></li>
+                    <li><a href="https://twitter.com/positivoviajes"><img class="footer__iconos" src="../Imagenes/Iconos/logoTwitter.png" alt="logoTwitter"></a></li>
+                    <li><a href="https://www.youtube.com/channel/UC3CcWL1uZp_GPqkOC_422vg"><img class="footer__iconos" src="../Imagenes/Iconos/logoYoutube.png" alt="logoYoutube"></a></li>
+                </ul>
+        </div>
+    </footer>
+<script src="../JS/scriptsContacto.js"></script>      
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+</body>
+</html>

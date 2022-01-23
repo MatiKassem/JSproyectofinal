@@ -11,41 +11,35 @@
     <title>Document</title>
 </head>
 <body>
-    <header>
-        <nav class="navbar navbar-expand-lg navbar-light">
-            <div class="container-fluid">
-              <a class="navbar-brand" href="../index.html"><img class="imgLogo" src="../Imagenes/Logos/logo.png" alt="logoHorizontal"></a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="../index.html"><img class="imgLogo" src="../Imagenes/Logos/logo.png" alt="logoHorizontal"></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mb-2 mb-lg-0">
+              <li class="nav-item px-3">
+                <a class="nav-link" aria-current="page" href="../index.html">Home</a>
+              </li>
+              <li class="nav-item px-3">
+                <a class="nav-link" href="../HTML/about.html">¿Quienes Somos?</a>
+              </li>
+              <li class="nav-item px-3">
+                <a class="nav-link active" href="../HTML/contacto.html">Contacto</a>
+              </li>
+              <li class="nav-item px-2">
+                <!-- Button Acceso modal -->
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+              ACCESO A USUARIOS
               </button>
-              <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mb-2 mb-lg-0">
-                  <li class="nav-item px-3">
-                    <a class="nav-link" aria-current="page" href="../index.html">¿Quienes Somos?</a>
-                  </li>
-                  <li class="nav-item px-3">
-                    <a class="nav-link" href="#">Productos</a>
-                  </li>
-                  <li class="nav-item px-3">
-                    <a class="nav-link" href="#">Arma tu PC</a>
-                  </li>
-                  <li class="nav-item px-3">
-                    <a class="nav-link" href="#">Servicio Post venta</a>
-                  </li>
-                  <li class="nav-item px-3">
-                    <a class="nav-link active" href="#">Contacto</a>
-                  </li>
-                  <li class="nav-item px-2">
-                    <!-- Button Acceso modal -->
-                  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                  ACCESO A USUARIOS
-                  </button>
-                  </li>
-                  </ul>
-                </div>
+              </li>
+            </ul>
             </div>
-    </nav>
-    </header>
+        </div>
+</nav>
+</header>
     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
          <div class="modal-content">
@@ -68,6 +62,8 @@
           </div>
          </div>
     </div>
+    <div class="contenedorContacto">
+    <div>
     <form id="formularioContacto">
         <fieldset class="formulario" id="formulario">
           <legend>DEJANOS TUS COMENTARIOS</legend>
@@ -102,9 +98,40 @@
                 </label>
             </div>
           </fieldset>
-          <button type="submit" class="btn btn-primary">Submit</button>
+          <button type="submit" class="btn btn-primary">Enviar</button>
         </fieldset>
-      </form>    
+      </form>
+      </div>
+      <div class="formulario">
+        <h2>Compumac Casa Central</h2>
+        <div class="datosContacto">
+        <i class="fas fa-map-marker-alt"></i>
+        <i class="fa-solid fa-location-dot">Monroe 4518, Villa Urquiza, CABA</i>
+        </div>
+        <div class="datosContacto">
+        <i class="fas fa-phone-alt"></i>
+        <p>+54(011)4872-6568</p>
+        </div>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3285.31854917103!2d-58.48225598455333!3d-34.57080546326487!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb663ff78e4db%3A0xb51f51278dc78c3e!2sAv.%20Monroe%204518%2C%20C1431%20CABA!5e0!3m2!1ses-419!2sar!4v1642866854957!5m2!1ses-419!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+      </div>
+          
+    </div>
+ <footer>
+      <div class="footer footer--color">
+              <ul class="footer__lista">
+                  <li><a href="#"><img class="footer__iconos" src="../Imagenes/Iconos/logoPaypal.png" alt="logPaypal"></a></li>
+                  <li><a href="#"><img class="footer__iconos" src="../Imagenes/Iconos/logoMaster.png" alt="logMaster"></a></li>
+                  <li><a href="#"><img class="footer__iconos" src="../Imagenes/Iconos/logoVisa.svg" alt="logVisa"></a></li>
+              </ul>
+              <p class="footer__texto">Sitio Web Oficial de CompuMAC S.R.L todos los derechos reservados. Diseño MK.</p>
+              <ul class="footer__lista">
+                  <li><a href="https://api.whatsapp.com/send/?phone=5491136215836&text&app_absent=0"><img class="footer__iconos" src="../Imagenes/Iconos/logoWsap.png" alt="logoWsap"></a></li>
+                  <li><a href="https://www.instagram.com/positivo.viajes/?hl=es-la"><img class="footer__iconos" src="../Imagenes/Iconos/logoInstagram.jpg" alt="logoInsta"></a></li>
+                  <li><a href="https://twitter.com/positivoviajes"><img class="footer__iconos" src="../Imagenes/Iconos/logoTwitter.png" alt="logoTwitter"></a></li>
+                  <li><a href="https://www.youtube.com/channel/UC3CcWL1uZp_GPqkOC_422vg"><img class="footer__iconos" src="../Imagenes/Iconos/logoYoutube.png" alt="logoYoutube"></a></li>
+              </ul>
+      </div>
+  </footer>    
 <script src="../JS/scriptsContacto.js"></script>      
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
 </body>
